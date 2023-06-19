@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <style>
+    #line {
+     position:absolute;
+      top: 50%;
+      left: 50%; 
+      width: 200px;
+      height: 2px;
+      background-color: black;
+      transform-origin: left ;
+      animation: rotateLine 5s linear infinite;
+    }
+
+    @keyframes rotateLine {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <div id="line"></div>
 </body>
-
 </html>
